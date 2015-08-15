@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Web Content Encryption (WCE) with JS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="js/styles/googlecode.css">
+		<link href="css/styles.css" rel="stylesheet">
+		
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+	</head>
+	<body>
+<nav class="navbar navbar-fixed-top header">
+ 	<div class="col-md-12">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand">Web Content Encryption (WCE) with JS</a>
+        </div>
+        
+</nav>
+
+<!--main-->
+<div class="container" id="main">
+   <div class="row">
+   <div class="col-md-4 col-sm-6">
+   
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4>Demo 1: Basic Version</h4></div>
+   			<div class="panel-body">
+   			<p class="subheading">The decryption key is: <strong>the key</strong></p>
+   			<p>
+   			<div class="demo">
+              <div id="N8L0cjGm" title="U2FsdGVkX1/aXnecEOYgOUspx/7l3qqS6qK+BA843xk=">
+	<a href="javascript:decryptText('N8L0cjGm')">Show encrypted text</a>
+</div>
+</div>
+</p>
+<p>
+Code:
+<pre class="code-block"><code class="html">&lt;div id="N8L0cjGm" title="U2FsdGVkX1/aXnecEOYgOUspx/7l3qqS6qK+BA843xk="&gt;
+ &lt;a href="javascript:decryptText('N8L0cjGm')"&gt;Show encrypted text&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</p>
+<p>
+Plain text:
+<pre class="code-block">Hello World!</pre>
+</p>
+            </div>
+   		</div>
+   		
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4>Demo 2: Hidden Image and Link</h4></div>
+   			<div class="panel-body">
+   			<p class="subheading">The decryption key is: <strong>the key</strong></p>
+   			<p>
+   			<div class="demo">
+              <div id="XwVTA9hp" title="U2FsdGVkX18Ra+/YY9528I6Hf/P1kDO85BtufvHv7ae96P6l21cvmOeEsZa6r9RfOOHIF2i8h1s5twUe1PuMZZ9exxSWAm2TSB54rUQQ33zBauuw+MwmZaeWxuap1flTCtUzHJxzRpKoUy//A3FQznhFyTd9mXWJEpZWwO58ZXgCROsEt7jOTl6jM0oozr38zYVo9YpEcpnmau40vNyKcA==">
+	<a href="javascript:decryptText('XwVTA9hp')">Show encrypted text</a>
+</div>
+</div>
+</p>
+<p>
+Code:
+<pre class="code-block"><code class="html">&lt;div id="XwVTA9hp" title="U2FsdGVkX18Ra+/YY9528I6Hf/P1kDO85BtufvHv7ae96P6l21cvmOeEsZa6r9RfOOHIF2i8h1s5twUe1PuMZZ9exxSWAm2TSB54rUQQ33zBauuw+MwmZaeWxuap1flTCtUzHJxzRpKoUy//A3FQznhFyTd9mXWJEpZWwO58ZXgCROsEt7jOTl6jM0oozr38zYVo9YpEcpnmau40vNyKcA=="&gt;
+ &lt;a href="javascript:decryptText('XwVTA9hp')"&gt;Show encrypted text&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</p>
+<p>
+Plain text:
+<pre class="code-block">&lt;a href="https://wayi.me/app/keepsecret"&gt;&lt;img src="examples.jpg"&gt;&lt;/a&gt;&lt;br/&gt;
+&lt;a href="https://wayi.me/app/keepsecret"&gt;KeepSecret&lt;/a&gt;</pre>
+</p>
+            </div>
+   		</div>
+     
+   			<div class="panel panel-default">
+          <div class="panel-heading"><h4>Demo 3: Inline Text</h4></div>
+   			<div class="panel-body">
+   			<p class="subheading">The decryption key is: <strong>the key</strong></p>
+   			<p>
+   			<div class="demo">
+              <a href="javascript:decryptText('yerNsFYL')">Reveal</a>
+<br />
+<br />
+The secret is... <em><span id="yerNsFYL" title="U2FsdGVkX18CUeph1Zyz9Wzz+gEWwWb3WKaXybH8pvo="></span></em>
+</div>
+</p>
+<p>
+Code:
+<pre class="code-block"><code class="html">&lt;a href="javascript:decryptText('yerNsFYL')"&gt;Reveal&lt;/a&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+The secret is... &lt;em&gt;&lt;span id="yerNsFYL" title="U2FsdGVkX18CUeph1Zyz9Wzz+gEWwWb3WKaXybH8pvo="&gt;&lt;/span&gt;&lt;/em&gt;</code></pre>
+</p>
+<p>
+Plain text:
+<pre class="code-block">1 + 1 = 3.</pre>
+</p>
+            </div>
+   		</div>
+
+	</div>
+  	<div class="col-md-4 col-sm-6">
+      	 
+          <div class="panel panel-default">
+          <div class="panel-heading"><h4>Demo 4: Hidden Text</h4></div>
+   			<div class="panel-body">
+   			<p class="subheading">The decryption key is: <strong>the key</strong></p>
+   			<p>
+   			<div class="demo">
+              There is <span id="bKBjInLZ" title="U2FsdGVkX18oseSjA3aVWUPJqEgr5vRqMr63nJ2IrqQ="><a href="javascript:decryptText('bKBjInLZ')">***</a></span> here.
+              </div>
+              </p>
+<p>
+Code:
+<pre class="code-block"><code class="html">There is &lt;span id="bKBjInLZ" title="U2FsdGVkX18oseSjA3aVWUPJqEgr5vRqMr63nJ2IrqQ="&gt;&lt;a href="javascript:decryptText('bKBjInLZ')"&gt;***&lt;/a&gt;&lt;/span&gt; here.</code></pre>
+</p>
+<p>
+Plain text:
+<pre class="code-block">hidden text</pre>
+</p>
+            </div>
+   		</div>
+   		
+   		<div class="panel panel-default">
+          <div class="panel-heading"><h4>Demo 5: Hide Your Email Address from Spammers</h4></div>
+   			<div class="panel-body">
+   			<p class="subheading">The decryption key is: <strong>the key</strong></p>
+   			<p>
+   			<div class="demo">
+              Email address: <span id="Pkc9nzTA" title="U2FsdGVkX197KI6HKUQwhdiQMi/B+mb36t0D2EX81fpi9HQ17c8fwtATufM1gG0CdTF98JhCy8jJc4eg4gQSiVID9555JS54F9d/cWQARs4="><a href="javascript:decryptText('Pkc9nzTA', 'Enter password:')">Show email address</a></span> (password: the key)
+              </div>
+</p>
+<p>
+Code:
+<pre class="code-block"><code class="html">Email address: &lt;span id="Pkc9nzTA" title="U2FsdGVkX197KI6HKUQwhdiQMi/B+mb36t0D2EX81fpi9HQ17c8fwtATufM1gG0CdTF98JhCy8jJc4eg4gQSiVID9555JS54F9d/cWQARs4="&gt;&lt;a href="javascript:decryptText('Pkc9nzTA', 'Enter password:')"&gt;Show email address&lt;/a&gt;&lt;/span&gt; (password: the key)</code></pre>
+</p>
+<p>
+Plain text:
+<pre class="code-block">&lt;a href="mailto:you@domain.com"&gt;you@domain.com&lt;/a&gt;</pre>
+</p>
+            </div>
+   		</div>
+   		
+   		<div class="panel panel-default">
+          <div class="panel-heading"><h4>Demo 6: Multiple Encryptions</h4></div>
+   			<div class="panel-body">
+   			<p class="subheading">The decryption key is: <strong>the key</strong></p>
+   			<p>
+   			<div class="demo">
+              <a href="javascript:decryptText(['92HLLfbq', 'FJysHlYi'])">Decrypt text</a>
+<br />
+<br />
+This is <span id="92HLLfbq" title="U2FsdGVkX18XXQsndfc8wDlbaHx6QO3pAwsS2i4QFMbjyHNIQ25tk80Nc18jW7QidkYiL67+7tvGqxk3EJ4MWw=="></span> cool<span id="FJysHlYi" title="U2FsdGVkX19ZGXezKk5mQYmiJZSD3mMDtN0SBHEXizPkVuXX1MuRK4h4Lsk7LrvXWetGe/k0YbEzaOvZFQDBMg=="></span>
+</div>
+</p>
+<p>
+Code:
+<pre class="code-block"><code class="html">&lt;a href="javascript:decryptText(['92HLLfbq', 'FJysHlYi'])"&gt;Decrypt text&lt;/a&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+This is &lt;span id="92HLLfbq" title="U2FsdGVkX18XXQsndfc8wDlbaHx6QO3pAwsS2i4QFMbjyHNIQ25tk80Nc18jW7QidkYiL67+7tvGqxk3EJ4MWw=="&gt;&lt;/span&gt; cool&lt;span id="FJysHlYi" title="U2FsdGVkX19ZGXezKk5mQYmiJZSD3mMDtN0SBHEXizPkVuXX1MuRK4h4Lsk7LrvXWetGe/k0YbEzaOvZFQDBMg=="&gt;&lt;/span&gt;</code></pre>
+</p>
+<p>
+Plain text:
+<pre class="code-block">&lt;span style="color:red"&gt;really&lt;/span&gt; <strong><em>and</em></strong> &lt;span style="color:red"&gt;!!!&lt;/span&gt;</pre>
+</p>
+            </div>
+   		</div>
+      
+  	</div>
+  	<div class="col-md-4 col-sm-6">
+  	
+  	<div class="panel panel-default">
+          <div class="panel-heading"><h4>Demo 7: More Than One (1) Key</h4></div>
+   			<div class="panel-body">
+   			<p class="subheading">The decryption key is: <strong>the key</strong><br/>
+   			The second key is: <strong>the second key</strong></p>
+   			<p>
+   			<div class="demo">
+              <a href="javascript:decryptText(['MHgDJAXq', '3Ev98Fjj'], 'Enter one of the decryption keys:')">Decrypt</a>
+<br />
+<br />
+<span id="MHgDJAXq" title="U2FsdGVkX1+43vbEaBToCVwx6s5yYJPcy8C0E6rJDdE=">***</span> went <span id="3Ev98Fjj" title="U2FsdGVkX18i0DBidrUt8pc8qoQnzQgyNFeB4HxCeT0=">***</span>
+</div>
+</p>
+<p>
+Code:
+<pre class="code-block"><code class="html">&lt;a href="javascript:decryptText(['MHgDJAXq', '3Ev98Fjj'], 'Enter one of the decryption keys:')"&gt;Decrypt&lt;/a&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;span id="MHgDJAXq" title="U2FsdGVkX1+43vbEaBToCVwx6s5yYJPcy8C0E6rJDdE="&gt;***&lt;/span&gt; went &lt;span id="3Ev98Fjj" title="U2FsdGVkX18i0DBidrUt8pc8qoQnzQgyNFeB4HxCeT0="&gt;***&lt;/span&gt;</code></pre>
+</p>
+<p>
+Plain text:
+<pre class="code-block">"Jack and Jill" (encrypted with one key) <strong><em>and</em></strong> "up the hill" (encrypted with the second key)</pre>
+</p>
+            </div>
+   		</div>
+   		 
+         <div class="panel panel-default">
+          <div class="panel-heading"><h4>Demo 8: Big Example</h4></div>
+   			<div class="panel-body">
+   			<p class="subheading">The decryption key is: <strong>the key</strong><br/>
+   			The second key is: <strong>the second key</strong></p>
+   			<p>
+   			<div class="demo">
+              <a href="javascript:decryptText(['dS3vzv5Q', '2Op9YUyO'])">Show encrypted text</a>
+<br />
+<div id="dS3vzv5Q" title="U2FsdGVkX1/lhgKOLJ2+Ov1de5/1w0sqxVaSsuFg8hR1Su5XDE2dde5ai5genkzAsZ6ZX72831RUXEwUS6P/60V7wBmRvcDpGfOAKQSqjmY="></div>
+<div id="2Op9YUyO" title="U2FsdGVkX181XzRm2W0pmqT2533KF1MNn7a6RhQ/1PyHd0jxOB4lZ3qJ4jX25KfC0oZgOqWZcfnMtLLYGt+ALhTFObj3lTM5VYV68oQ49K8="></div>
+<div class="clearfix"></div>
+</div>
+</p>
+<p>
+Code:
+<pre class="code-block"><code class="html">&lt;a href="javascript:decryptText(['dS3vzv5Q', '2Op9YUyO'])"&gt;Show encrypted text&lt;/a&gt;
+&lt;br /&gt;
+&lt;div id="dS3vzv5Q" title="U2FsdGVkX1/lhgKOLJ2+Ov1de5/1w0sqxVaSsuFg8hR1Su5XDE2dde5ai5genkzAsZ6ZX72831RUXEwUS6P/60V7wBmRvcDpGfOAKQSqjmY="&gt;&lt;/div&gt;
+&lt;div id="2Op9YUyO" title="U2FsdGVkX181XzRm2W0pmqT2533KF1MNn7a6RhQ/1PyHd0jxOB4lZ3qJ4jX25KfC0oZgOqWZcfnMtLLYGt+ALhTFObj3lTM5VYV68oQ49K8="&gt;&lt;/div&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;</code></pre>
+</p>
+<p>
+Plain text:
+<pre class="code-block">&lt;div style="float:left; width: 48%"&gt;Lots of text&lt;/div&gt; (encrypted with one key)
+&lt;div style="float:right; width: 48%"&gt;Lots more text&lt;/div&gt; (encrypted with the second key)</pre>
+</p>
+            </div>
+   		</div>
+   		
+   		<div class="panel panel-default">
+          <div class="panel-heading"><h4>Embed It Directly Into Your Site</h4></div>
+   			<div class="panel-body">
+   			<p class="subheading">Example of the code for embedding directly the code together with <code>wce.min.js</code>.</p>
+   			<p>
+Code:
+<pre class="code-block"><code class="html">This is encrypted: &lt;span id="o7z5f2xm" title="U2FsdGVkX1/f4MAqUjuHbFHMc/OXZRDmyA9JeQLSbva31I7jNkJRf5op3jOm9VbzJDKT6OiW45wvvQGb3y9zDRviIes9T9aTdfzhj9nfVJshsbzH2pWpPqfJjqYvd+RkWb/kYX/EU1oNNZG012XuQzVADmut9dVkqevkerniS+tbNh0bY0eeKDcRgbAf72ultyF0AEZLA7elv6Y3/Q22yesBmS1YcaVCepRYvJWfR5c="&gt;&lt;a href="javascript:decryptText('o7z5f2xm')"&gt;***&lt;/a&gt;&lt;/span&gt;
+&lt;script type="text/javascript" src="//raw.githubusercontent.com/heiswayi/wce-lib/master/wce.min.js"&gt;&lt;/script&gt;</code></pre>
+</p>
+   			
+            </div>
+   		</div>
+      
+    </div>
+  </div><!--/row-->
+    
+  </div>
+</div><!--/main-->
+
+	<!-- script references -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/highlight.pack.js"></script>
+		<script src="js/wce.min.js"></script>
+		<script src="js/wce.form.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
