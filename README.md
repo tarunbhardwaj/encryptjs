@@ -6,6 +6,6 @@ Web Content Encryption (WCE) is a JavaScript encryption tool based on Gibberish 
 
 **Examples of Usage:** http://heiswayi.github.io/wce/examples.html
 
-### License
+## License
 
-[MIT License](http://heiswayi.github.io/mit-license)
+MIT License
