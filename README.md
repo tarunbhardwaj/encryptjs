@@ -4,6 +4,6 @@ EncryptJS is a JavaScript library for encrypting message and embed it as HTML co
 
 **URL:** [http://heiswayi.github.io/encryptjs](http://heiswayi.github.io/encryptjs)
 
-## License
+### License
 
 [MIT](LICENSE.md)
