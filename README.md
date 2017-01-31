@@ -1,11 +1,9 @@
-# wce
+# EncryptJS
 
-Web Content Encryption (WCE) is a JavaScript encryption tool based on Gibberish AES to encrypt/decrypt your web content or message and it is embeddable into your site.
+EncryptJS is a JavaScript library for encrypting message and embed it as HTML code into your web content. This encrypted message can be decrypted directly from the website with a decryption key. This page provides the generator service for you to get started.
 
-**Generator Link:** http://heiswayi.github.io/wce
-
-**Examples of Usage:** http://heiswayi.github.io/wce/examples.html
+**URL:** [http://heiswayi.github.io/encryptjs](http://heiswayi.github.io/encryptjs)
 
 ## License
 
-MIT License
+[MIT](LICENSE.md)
