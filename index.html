@@ -3,27 +3,27 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Web Content Encryption (WCE) with JS</title>
+		<title>EncryptJS</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
+
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="js/styles/googlecode.css">
 		<link href="css/styles.css" rel="stylesheet">
-		
+
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-		
+
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		
+
 	</head>
 	<body>
 <nav class="navbar navbar-fixed-top header">
  	<div class="col-md-12">
         <div class="navbar-header">
-          <a href="index.html" class="navbar-brand">Web Content Encryption (WCE) with JS</a>
+          <a href="index.html" class="navbar-brand">EncryptJS</a>
         </div>
-        
+
 </nav>
 
 <!--main-->
@@ -31,16 +31,16 @@
    <div class="row">
    <div class="col-md-4 col-sm-6">
         <div class="panel panel-default">
-          <div class="panel-heading"><h4>What is Web Content Encryption?</h4></div>
+          <div class="panel-heading"><h4>About EncryptJS</h4></div>
    			<div class="panel-body">
-              <p><strong>Web Content Encryption (WCE)</strong> is a JavaScript encryption tool based on Gibberish AES to encrypt/decrypt your web content or message and it is embeddable into your site.</p>
+              <p>EncryptJS is a JavaScript library for encrypting message and embed it as HTML code into your web content. This encrypted message can be decrypted directly from the website with a decryption key. This page provides the generator service for you to get started.</p>
               <p>
-              See the <a href="examples.html">demonstrations</a> for different kind of usages.
+              See the <a href="examples.html">examples</a> for more variety of usages and how it works.
               </p>
             </div>
    		</div>
-   		
-        <div class="well"> 
+
+        <div class="well">
              <form class="form-horizontal" role="form" name="key" action="" onsubmit="return false;">
               <h4>1. Set the Decryption Key</h4>
                <div class="form-group" style="padding:14px;">
@@ -52,26 +52,26 @@
               <button class="btn btn-default" type="button" onclick="document.key.text.select();">Select</button>
             </form>
         </div>
-     
+
    			<div class="well">
               <form class="form-horizontal" role="form" name="plain" action="" onsubmit="return false;">
               <h4>2. Message to Encrypt</h4>
                <div class="form-group" style="padding:14px;">
                 <textarea name="text" class="form-control" id="plainText" rows="10" placeholder="Enter or type your plain message here..."></textarea>
-                <p class="help-block">You can use HTML code here.</p>
+                <p class="help-block">P/S: You can use HTML code here.</p>
               </div>
               <button class="btn btn-success" name="encrypt" type="button" onclick="encryptFormText();">Encrypt</button>
               <button class="btn btn-default" type="button" onclick="document.plain.text.value = &#39;&#39;;">Clear</button>
               <button class="btn btn-default" type="button" onclick="document.plain.text.select();">Select</button>
             </form>
-         </div> 
+         </div>
 
 	</div>
   	<div class="col-md-4 col-sm-6">
-      	 
+
           <div class="well">
               <form class="form-horizontal" role="form" name="cipher" action="" onsubmit="return false;">
-              <h4>3. OPTIONAL: To Decrypt a Message</h4>
+              <h4>Optional: To Decrypt a Message</h4>
                <div class="form-group" style="padding:14px;">
                 <textarea name="text" class="form-control" id="cipherText" rows="10" placeholder="Enter your encrypted message here if you want to decrypt it..."></textarea>
               </div>
@@ -79,15 +79,15 @@
               <button class="btn btn-default" type="button" onclick="document.cipher.text.value = &#39;&#39;;">Clear</button>
               <button class="btn btn-default" type="button" onclick="document.cipher.text.select();">Select</button>
             </form>
-            <p class="help-block"><strong>NOTE:</strong> For decryption purpose, insert the correct key at "<strong>1. Set the Decryption Key</strong>" section, press "Decrypt" button and your decrypted message will be displayed in "<strong>2. Message to Encrypt</strong>" section.</p>
-         </div> 
+            <p class="help-block"><strong>NOTE:</strong> For decryption testing purpose, insert the correct key at "<strong>1. Set the Decryption Key</strong>" section, press "Decrypt" button and your decrypted message will be displayed in "<strong>2. Message to Encrypt</strong>" section.</p>
+         </div>
 
       	 <div class="well">
               <form class="form-horizontal" role="form" name="encryptedCode" action="" onsubmit="return false;">
-              <h4>4. Generated HTML Code</h4>
+              <h4>3. Generated HTML Code</h4>
                <div class="form-group" style="padding:14px;">
                 <textarea name="text" class="form-control2" id="codeText" rows="5" wrap="off" onclick="this.focus(); this.select();" readonly></textarea>
-                <p class="help-block"><strong>NOTE:</strong> Refer to Section #6 for how to use this HTML code in your webpage.</p>
+                <p class="help-block"><strong>NOTE:</strong> Please refer to Section #5 for how to use this HTML code in your webpage.</p>
               </div>
 <label class="radio-inline">
   <input type="radio" name="codeType" value="hide" checked="" onclick="genSampleCode();"> Standard
@@ -99,37 +99,37 @@
   <input type="radio" name="codeType" value="show" onclick="genSampleCode();"> ***
 </label>
             </form>
-            
-         </div> 
-      
+
+         </div>
+
   	</div>
   	<div class="col-md-4 col-sm-6">
-  	
+
   	<div class="panel panel-default">
-           <div class="panel-heading"><h4>5. HTML Code in Preview</h4></div>
+           <div class="panel-heading"><h4>4. HTML Code in Preview</h4></div>
    			<div class="panel-body">
               <div id="encryptedTest">...</div>
             </div>
    		 </div>
-   		 
+
          <div class="panel panel-default">
            <div class="panel-heading"><h4>6. How to Use It in Your Site</h4></div>
    			<div class="panel-body">
               <p>
-              To put the encrypted message in your own site:-
+              To display the encrypted message in your site:-
               <ol>
-                <li><strong>Include</strong> <code>wce.min.js</code> into your site (see the code below).</li>
+                <li><strong>Include</strong> <code>encrypt.min.js</code> into your site (see the code below).</li>
                 <li><strong>Encrypt</strong> your message here and <em>be sure to remember the decryption key!</em></li>
-                <li><strong>Copy</strong> the HTML code in the box of Section #5.</li>
-                <li>Then <strong>paste</strong> it into your website or blog.</li>
+                <li><strong>Copy</strong> the HTML code in the box of Section #4.</li>
+                <li>Then <strong>paste</strong> it into your website or blog content.</li>
               </ol>
               </p>
               <p>
-              Putting <code>wce.min.js</code> into your site:<br/>
-              <pre class="code-block"><code class="html">&lt;script type="text/javascript" src="//raw.githubusercontent.com/heiswayi/wce/master/wce.min.js"&gt;&lt;/script&gt;</code></pre>
+              Importing <code>encrypt.min.js</code> into your site:<br/>
+              <pre class="code-block"><code class="html">&lt;script type="text/javascript" src="//raw.githubusercontent.com/heiswayi/encryptjs/master/encrypt.min.js"&gt;&lt;/script&gt;</code></pre>
               </p>
               <p>
-              This is the basic code to use in the body of the HTML code of your site in order to be able to do the decryption:
+              Basically, this is the HTML code structure inside your site for the decryption to work properly:
               <pre class="code-block">&lt;div id="<strong>uniqueID</strong>" title="<strong>encrypted text</strong>"&gt;
     &lt;a href="javascript:decryptText('<strong>uniqueID</strong>')"&gt;Show encrypted text&lt;/a&gt;
 &lt;/div&gt;</pre>
@@ -141,14 +141,14 @@
 </ul>
               </p>
               <p>
-              See the <a href="examples.html">demonstrations</a> for different kind of usages.
+              See the <a href="examples.html">examples</a> for more variety of usages and how it works.
               </p>
             </div>
    		</div>
-      
+
     </div>
   </div><!--/row-->
-    
+
   </div>
 </div><!--/main-->
 
